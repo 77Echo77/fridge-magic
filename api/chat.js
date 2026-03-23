@@ -29,7 +29,7 @@ function getClientIP(req) {
   );
 }
 
-module.exports async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // CORS — 只允许同源请求
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
