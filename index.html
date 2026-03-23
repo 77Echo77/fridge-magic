@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>冰箱魔法师</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
   :root {
     --cream: #FAF6EF; --warm-white: #FDF9F3;
@@ -17,7 +17,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     background: var(--cream); color: var(--ink);
-    font-family: 'Noto Sans SC', sans-serif; font-weight: 300; font-size: 16px;
+    font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-weight: 300; font-size: 16px;
     min-height: 100vh;
     background-image: radial-gradient(circle at 20% 20%, rgba(200,67,10,0.04) 0%, transparent 50%),
                       radial-gradient(circle at 80% 80%, rgba(58,107,58,0.04) 0%, transparent 50%);
@@ -27,13 +27,13 @@
     border-bottom: 1px solid var(--border); background: var(--warm-white);
     position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 12px var(--shadow);
   }
-  .logo { font-family: 'Noto Serif SC', serif; font-size: 28px; font-weight: 700; color: var(--accent); }
+  .logo { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 28px; font-weight: 700; color: var(--accent); }
   .logo-sub { font-size: 13px; color: var(--ink-light); letter-spacing: 2px; margin-top: 2px; }
   .header-right { margin-left: auto; display: flex; gap: 10px; }
   .hbtn {
     font-size: 14px; color: var(--ink-light); cursor: pointer; padding: 8px 18px;
     border: 1px solid var(--border); border-radius: 20px; background: transparent;
-    font-family: 'Noto Sans SC', sans-serif; transition: all 0.2s; white-space: nowrap;
+    font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; transition: all 0.2s; white-space: nowrap;
   }
   .hbtn:hover { background: var(--accent-bg); border-color: var(--accent-light); color: var(--accent); }
 
@@ -56,7 +56,7 @@
     padding: 26px 28px; margin-bottom: 32px; display: none; animation: fadeUp 0.3s ease both;
   }
   .info-panel.open { display: block; }
-  .info-title { font-family: 'Noto Serif SC', serif; font-size: 18px; font-weight: 600; margin-bottom: 16px; }
+  .info-title { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 16px; }
   .info-body { font-size: 15px; color: var(--ink-mid); line-height: 2.1; margin-bottom: 18px; }
   .usage-detail { background: var(--gold-light); border: 1px solid #D4A830; border-radius: 10px; padding: 14px 18px; margin-bottom: 18px; }
   .usage-detail-lbl { font-size: 15px; color: var(--gold); font-weight: 500; margin-bottom: 10px; }
@@ -65,7 +65,7 @@
   .usage-detail-sub { font-size: 13px; color: var(--gold); opacity: 0.8; }
   .close-btn {
     padding: 10px 26px; background: var(--ink); color: var(--cream); border: none;
-    border-radius: 8px; cursor: pointer; font-family: 'Noto Sans SC', sans-serif; font-size: 15px; font-weight: 500;
+    border-radius: 8px; cursor: pointer; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 15px; font-weight: 500;
   }
 
   /* SECTION */
@@ -87,14 +87,14 @@
   .input-row { display: flex; gap: 10px; margin-bottom: 14px; }
   .ingredient-input {
     flex: 1; padding: 14px 20px; border: 1.5px solid var(--border); border-radius: 10px;
-    background: var(--warm-white); font-family: 'Noto Sans SC', sans-serif; font-size: 16px;
+    background: var(--warm-white); font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 16px;
     color: var(--ink); outline: none; transition: border-color 0.2s, box-shadow 0.2s;
   }
   .ingredient-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(200,67,10,0.08); }
   .ingredient-input::placeholder { color: var(--ink-light); font-weight: 300; }
   .add-btn {
     padding: 14px 24px; background: var(--accent); color: white; border: none; border-radius: 10px;
-    cursor: pointer; font-family: 'Noto Sans SC', sans-serif; font-size: 16px; font-weight: 500;
+    cursor: pointer; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 16px; font-weight: 500;
     transition: background 0.2s, transform 0.1s; white-space: nowrap;
   }
   .add-btn:hover { background: #A83508; }
@@ -118,7 +118,7 @@
   .quick-tag {
     padding: 6px 14px; border: 1px dashed var(--border); border-radius: 16px; font-size: 14px;
     color: var(--ink-mid); cursor: pointer; background: transparent;
-    font-family: 'Noto Sans SC', sans-serif; transition: all 0.15s;
+    font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; transition: all 0.15s;
   }
   .quick-tag:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-bg); border-style: solid; }
 
@@ -129,7 +129,7 @@
   .pref-opt {
     padding: 9px 20px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 15px;
     color: var(--ink-mid); cursor: pointer; background: var(--warm-white);
-    font-family: 'Noto Sans SC', sans-serif; transition: all 0.15s; white-space: nowrap;
+    font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; transition: all 0.15s; white-space: nowrap;
   }
   .pref-opt:hover { border-color: var(--ink-light); }
   .pref-opt.active { border-color: var(--accent); background: var(--accent-bg); color: var(--accent); font-weight: 500; }
@@ -139,7 +139,7 @@
   /* CTA */
   .cta-btn {
     width: 100%; padding: 20px; background: var(--ink); color: var(--cream); border: none;
-    border-radius: 12px; font-family: 'Noto Serif SC', serif; font-size: 18px; font-weight: 600;
+    border-radius: 12px; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 18px; font-weight: 600;
     cursor: pointer; letter-spacing: 1px; transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
     display: flex; align-items: center; justify-content: center; gap: 10px;
     box-shadow: 0 4px 20px rgba(28,18,8,0.15); position: relative; overflow: hidden;
@@ -168,7 +168,7 @@
   /* RESULTS */
   .results-area { margin-top: 36px; }
   .results-header { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
-  .results-title { font-family: 'Noto Serif SC', serif; font-size: 20px; font-weight: 600; }
+  .results-title { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 20px; font-weight: 600; }
   .results-count { font-size: 14px; color: var(--ink-light); background: var(--border); padding: 3px 12px; border-radius: 10px; }
 
   /* CARD */
@@ -177,7 +177,7 @@
   .card-header { padding: 20px 24px; display: flex; align-items: center; gap: 16px; cursor: pointer; user-select: none; }
   .card-emoji { font-size: 32px; flex-shrink: 0; }
   .card-title-block { flex: 1; }
-  .card-title { font-family: 'Noto Serif SC', serif; font-size: 20px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .card-title { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 20px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
   .card-meta { display: flex; gap: 14px; flex-wrap: wrap; }
   .meta-tag { font-size: 13px; color: var(--ink-light); }
   .card-toggle { font-size: 20px; color: var(--ink-light); transition: transform 0.3s; flex-shrink: 0; }
@@ -193,21 +193,21 @@
   .step-num { width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: white; font-size: 12px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
   .step-text { font-size: 16px; color: var(--ink-mid); line-height: 1.8; }
   .card-footer { display: flex; gap: 10px; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); }
-  .footer-btn { flex: 1; padding: 11px; border-radius: 8px; font-size: 15px; cursor: pointer; font-family: 'Noto Sans SC', sans-serif; transition: all 0.15s; font-weight: 500; border: 1.5px solid var(--border); background: transparent; color: var(--ink-mid); }
+  .footer-btn { flex: 1; padding: 11px; border-radius: 8px; font-size: 15px; cursor: pointer; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; transition: all 0.15s; font-weight: 500; border: 1.5px solid var(--border); background: transparent; color: var(--ink-mid); }
   .footer-btn:hover { background: var(--cream); }
   .footer-btn.primary { background: var(--accent-bg); border-color: var(--accent-light); color: var(--accent); }
   .footer-btn.primary:hover { background: #FDDEC8; }
 
   /* BOTTOM */
   .bottom-actions { display: flex; gap: 10px; margin-top: 26px; flex-wrap: wrap; }
-  .bottom-btn { flex: 1; min-width: 160px; padding: 14px; border: 1.5px solid var(--border); border-radius: 10px; background: var(--warm-white); font-family: 'Noto Sans SC', sans-serif; font-size: 15px; color: var(--ink-mid); cursor: pointer; transition: all 0.15s; }
+  .bottom-btn { flex: 1; min-width: 160px; padding: 14px; border: 1.5px solid var(--border); border-radius: 10px; background: var(--warm-white); font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 15px; color: var(--ink-mid); cursor: pointer; transition: all 0.15s; }
   .bottom-btn:hover { border-color: var(--ink-light); background: var(--cream); }
 
   /* HISTORY */
   .history-panel { position: fixed; right: -380px; top: 0; width: 360px; height: 100vh; background: var(--warm-white); border-left: 1px solid var(--border); padding: 30px 24px; transition: right 0.3s cubic-bezier(0.25,0.46,0.45,0.94); z-index: 200; overflow-y: auto; box-shadow: -4px 0 20px var(--shadow); }
   .history-panel.open { right: 0; }
   .history-close { float: right; cursor: pointer; color: var(--ink-light); font-size: 22px; }
-  .history-title { font-family: 'Noto Serif SC', serif; font-size: 20px; font-weight: 600; margin-bottom: 22px; }
+  .history-title { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 22px; }
   .history-item { padding: 14px; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; cursor: pointer; transition: all 0.15s; }
   .history-item:hover { background: var(--cream); }
   .history-item-title { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
