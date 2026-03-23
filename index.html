@@ -475,7 +475,15 @@ async function generateRecipes() {
     }
 
     const text = (data.text || '').replace(/```json|```/g, '').trim();
-    const recipes = JSON.parse(text);
+    let recipes;
+    try {
+      recipes = JSON.parse(text);
+    } catch (parseError) {
+      throw new Error('AI 返回格式错误，请重试');
+    }
+    if (!Array.isArray(recipes)) {
+      throw new Error('AI 返回格式错误，请重试');
+    }
     renderRecipes(recipes);
     bumpUsage();
     refreshUsageUI();

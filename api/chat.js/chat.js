@@ -86,7 +86,13 @@ export default async function handler(req, res) {
     }
 
     const data = await response.json();
-    const text = data.choices?.[0]?.message?.content || '';
+    let text = data.choices?.[0]?.message?.content || '';
+    // 验证 AI 返回的是有效 JSON
+    try {
+      JSON.parse(text.replace(/```json|```/g, '').trim());
+    } catch (e) {
+      return res.status(500).json({ error: 'AI 返回格式错误，请重试' });
+    }
     return res.status(200).json({ text });
 
   } catch (e) {
